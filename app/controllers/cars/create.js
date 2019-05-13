@@ -14,6 +14,5 @@ export default class CarsCreateController extends Controller {
 		});
 		car.save();
 		alert('Registro Creado');
-		
 	}
 }
