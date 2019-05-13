@@ -1,0 +1,28 @@
+<div class="row">
+	<form action="">
+		<div class="col s12 l8">
+			<img src="{{this.model.img_url}}" width="100%">
+		</div>
+		<div class="input-field col s12 l3">
+			{{input id="brand" type="text" class="validate" value=this.model.brand onchange=(action (mut this.model.brand))}}
+	        <label for="brand">Brand</label>
+		</div>
+		<div class="input-field col s12 l3">
+			{{input id="color" type="text" class="validate" value=this.model.color onchange=(action (mut this.model.color))}}
+	        <label for="color">Color</label>
+		</div>
+		<div class="input-field col s12 l3">
+			{{input id="price" type="text" class="validate" value=this.model.price onchange=(action (mut this.model.price))}}
+	        <label for="price">Price</label>
+		</div>
+		<div class="input-field col s12 l3">
+			{{input id="img" type="text" class="validate" value=this.model.img_url onchange=(action (mut this.model.img_url))}}
+	        <label for="img">Image</label>
+		</div>
+		<div class="col s12 l3">
+			<a onclick={{action this.update this.model.id this.model.brand this.model.color this.model.price this.model.img_url}} class="waves-effect waves-light btn"><i class="material-icons left">done</i>Actualizar</a>
+		</div>
+	</form>
+</div>
+{{log this.model}}
+{{log model}}
